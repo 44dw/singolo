@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Lato-Black";
+  src: url("/assets/fonts/Lato-Black.ttf");
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("/assets/fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("/assets/fonts/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/assets/fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("/assets/fonts/Lato-Thin.ttf");
+}
+.slider .slider__promo .promo__content, .slider .slider__promo, .header .container__navigation ul, .header .header__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper {
+  max-width: 1020px;
+  min-width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 89px;
+  font-family: "Lato-Bold";
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #2d303a;
+}
+.header .header__container {
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 41px;
+  padding-right: 34px;
+}
+.header .container__logo {
+  font-size: 25px;
+}
+.header .container__logo_star {
+  color: #f06c64;
+}
+.header .header_bottom {
+  height: 6px;
+  background-color: #323746;
+}
+.header .container__navigation ul {
+  list-style: none;
+}
+.header .container__navigation ul li {
+  margin-right: 13px;
+}
+.header .container__navigation ul li:before {
+  content: "⋅";
+  color: #494e62;
+  padding-right: 10px;
+}
+.header .container__navigation ul .container__navigation_first::before {
+  content: none;
+}
+.header .container__navigation ul .container__navigation_last {
+  margin-right: 0px;
+}
+
+.slider {
+  height: 592px;
+  background-color: #f06c64;
+}
+.slider .slider__promo {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.slider .slider__promo .promo__arrow_right {
+  text-align: center;
+  margin-left: 55px;
+  margin-right: 40px;
+}
+.slider .slider__promo .promo__arrow_left {
+  text-align: center;
+  transform: rotate(180deg);
+  margin-left: 40px;
+  margin-right: 55px;
+}
+.slider .slider__promo .promo__content {
+  justify-content: space-between;
+  width: 100%;
+}
+.slider .slider__promo .promo__content .content__phone_vertical {
+  position: relative;
+  top: 0px;
+}
+.slider .slider__promo .promo__content .content__phone_horizontal {
+  height: 100%;
+  transform: rotate(90deg);
+}
+.slider .slider_bottom {
+  height: 6px;
+  background-color: #ea676b;
+}
+
+#phone {
+  position: absolute;
+  right: 25px;
+  top: -1px;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=singolo1.css.map */
