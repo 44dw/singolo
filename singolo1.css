@@ -1,23 +1,23 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Lato-Black";
-  src: url("/assets/fonts/Lato-Black.ttf");
+  src: url("./assets/fonts/Lato-Black.ttf");
 }
 @font-face {
   font-family: "Lato-Bold";
-  src: url("/assets/fonts/Lato-Bold.ttf");
+  src: url("./assets/fonts/Lato-Bold.ttf");
 }
 @font-face {
   font-family: "Lato-Light";
-  src: url("/assets/fonts/Lato-Light.ttf");
+  src: url("./assets/fonts/Lato-Light.ttf");
 }
 @font-face {
   font-family: "Lato-Regular";
-  src: url("/assets/fonts/Lato-Regular.ttf");
+  src: url("./assets/fonts/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Lato-Thin";
-  src: url("/assets/fonts/Lato-Thin.ttf");
+  src: url("./assets/fonts/Lato-Thin.ttf");
 }
 .options__entity, .promo__content, .slider__promo, .header__navigation ul, .header__container {
   display: flex;
@@ -165,6 +165,7 @@ body {
   font-family: "Lato-Light";
   font-size: 18px;
   line-height: 30px;
+  text-align: justify;
   color: #767e9e;
 }
 
