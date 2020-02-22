@@ -89,6 +89,10 @@ body {
   margin-right: 0px;
 }
 
+.active {
+  color: #f06c64;
+}
+
 .slider {
   background-color: #f06c64;
 }
