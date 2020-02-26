@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Lato-Black";
+  src: url("./assets/fonts/Lato-Black.ttf");
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("./assets/fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("./assets/fonts/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("./assets/fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("./assets/fonts/Lato-Thin.ttf");
+}
+.gallery__filtering {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1020px;
+  min-width: 1020px;
+  margin: auto;
+}
+
+.portfolio {
+  height: 864px;
+  background-color: #323746;
+  font-family: "Lato-Regular";
+  font-size: 12px;
+  color: #767e9e;
+}
+
+.portfolio__container {
+  padding: 60px 40px;
+}
+
+.portfolio__header {
+  margin: auto;
+  font-family: "Lato-Black";
+  font-size: 30px;
+  color: #666d89;
+}
+
+.portfolio__description {
+  font-family: "Lato-Light";
+  font-size: 18px;
+  color: #767e9e;
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+
+.gallery__filtering {
+  list-style: none;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 18px;
+}
+.gallery__filtering li {
+  border: 1px solid #666d89;
+  padding: 3px 7px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.gallery__filtering li:hover {
+  color: #dedede;
+  border-color: #dedede;
+  cursor: pointer;
+}
+.gallery__filtering .active {
+  color: #dedede;
+  border: 1px solid #dedede;
+}
+
+.gallery__tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  grid-template-rows: repeat(3, 187px);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.gallery__tiles .tiles__tile {
+  background-color: green;
+}
+
+.ship {
+  background-image: url(./assets/images/gallery/ship.png);
+  background-position: top -9px left -7px;
+}
+
+/*# sourceMappingURL=singolo2.css.map */
