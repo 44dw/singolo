@@ -16,16 +16,21 @@ body {
     margin: auto;
 }
 
-.portfolio {
-    height: 864px;
+.portfolio_bottom {
+    height: 6px;
     background-color: #323746;
+}
+
+.portfolio {
+    height: 870px;
+    background-color: #2d303a;
     font-family: 'Lato-Regular';
     font-size: 12px;
     color: #767e9e;
 }
 
 .portfolio__container {
-    padding: 60px 40px;
+    padding: 60px 40px 66px 40px;
 }
 
 .portfolio__header {
@@ -41,6 +46,36 @@ body {
     color: #767e9e;
     margin-top: 22px;
     margin-bottom: 15px;
+}
+
+.about {
+    height: 734px;
+    background-color: #f2f2f2;
+}
+
+.about__bottom {
+    height: 6px;
+    background-color: #ffffff;
+}
+
+.about__header {
+    margin: 0;
+    font-size: 30px;
+    color: #666d89;
+    font-family: 'Lato-Black';
+}
+
+.about__description {
+    font-size: 18px;
+    font-family: 'Lato-Light';
+    text-align: justify;
+    line-height: 30px;
+    color: #767e9e;
+    margin-bottom: 44px;
+}
+
+.about__container {
+    padding: 60px 40px 62px 40px;
 }
 
 .gallery__filtering {
@@ -84,6 +119,169 @@ body {
 }
 
 .ship {
-    background-image: url(./assets/images/gallery/ship.png);
-    background-position: top -9px left -7px;
+    background-image: url("./assets/images/gallery/ship.png");
+    // background-position: top -9px left -7px;
+    background-position: right -10px top -11px;
+}
+
+.face {
+    background-image: url("./assets/images/gallery/face.png");
+    background-position: center right -62px;
+}
+
+.town {
+    background-image: url("./assets/images/gallery/town.png");
+    background-position: right -19px top -1px;
+}
+
+.robot {
+    background-image: url("./assets/images/gallery/robot.png");
+    background-position: right -18px top -2px;
+}
+
+.animals {
+    background-image: url("./assets/images/gallery/animals.png");
+    background-position: right -12px top -16px;
+}
+
+.sdk {
+    background-image: url("./assets/images/gallery/sdk.png");
+    background-position: right -22px top -4px;
+}
+
+.space {
+    background-image: url("./assets/images/gallery/space.png");
+    background-position: right -121px top -39px;
+}
+
+.birds {
+    background-image: url("./assets/images/gallery/birds.png");
+    background-position: right -34px top -32px;
+}
+
+.monster {
+    background-image: url("./assets/images/gallery/monster.png");
+    background-position: right -18px top -2px;
+}
+
+.letter {
+    background-image: url("./assets/images/gallery/letter.png");
+    background-position: right -113px top -113px;
+}
+
+.ogre {
+    background-image: url("./assets/images/gallery/ogre.png");
+    background-position: right -50px bottom -50px;
+}
+
+.indicator {
+    background-image: url("./assets/images/gallery/indicator.png");
+    background-position: right -40px bottom -179px;
+}
+
+.personalities__photo {
+    margin-right: 0;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.about__personalities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personalities {
+    width: 300px;
+}
+
+.jensen {
+    background-image: url('./assets/images/faces/jensen.png');
+}
+
+.miles {
+    background-image: url('./assets/images/faces/miles.png');
+}
+
+.visari {
+    background-image: url('./assets/images/faces/visari.png');
+}
+
+.personalities__name {
+    font-family: 'Lato-Black';
+    text-align: justify;
+    font-size: 18px;
+    color: #767e9e;
+    margin-bottom: 8px;
+    word-wrap: normal;
+}
+
+.personalities__description {
+    font-family: 'Lato-Regular';
+    line-height: 22px;
+    font-size: 12px;
+    text-align: justify;
+    color: #666d89;
+    margin-bottom: 21px;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+        padding-right: 8px;
+        padding-bottom: 5px;    
+    }
+}
+
+.social-networks__facebook {
+    background-image: url('./assets/images/social/facebook.png');
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('./assets/images/social/active/facebook-active.png');
+    }
+}
+
+.social-networks__google {
+    background-image: url('./assets/images/social/google.png');
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('./assets/images/social/active/google-active.png');
+    }
+}
+
+.social-networks__twitter {
+    background-image: url('./assets/images/social/twitter.png');
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('./assets/images/social/active/twitter-active.png');
+    }
+}
+
+.social-networks__linkedin {
+    background-image: url('./assets/images/social/linkedin.png');
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('./assets/images/social/active/linkedin-active.png');
+    }
 }
