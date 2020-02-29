@@ -22,9 +22,9 @@ body {
 }
 
 .portfolio {
-    height: 870px;
     background-color: #2d303a;
-    font-family: 'Lato-Regular';
+    font-family: 'Lato';
+    font-weight: 400;
     font-size: 12px;
     color: #767e9e;
 }
@@ -35,13 +35,15 @@ body {
 
 .portfolio__header {
     margin: auto;
-    font-family: 'Lato-Black';
+    font-family: 'Lato';
+    font-weight: 900;
     font-size: 30px;
     color: #666d89;
 }
 
 .portfolio__description {
-    font-family: 'Lato-Light';
+    font-family: 'Lato';
+    font-weight: 300;
     font-size: 18px;
     color: #767e9e;
     margin-top: 22px;
@@ -49,7 +51,7 @@ body {
 }
 
 .about {
-    height: 734px;
+    // height: 734px;
     background-color: #f2f2f2;
 }
 
@@ -62,12 +64,14 @@ body {
     margin: 0;
     font-size: 30px;
     color: #666d89;
-    font-family: 'Lato-Black';
+    font-family: 'Lato';
+    font-weight: 900;
 }
 
 .about__description {
     font-size: 18px;
-    font-family: 'Lato-Light';
+    font-family: 'Lato';
+    font-weight: 300;
     text-align: justify;
     line-height: 30px;
     color: #767e9e;
@@ -89,7 +93,7 @@ body {
         border: 1px solid #666d89;
         padding: 3px 7px;
         border-radius: 5px;
-        margin-right: 10px;
+        margin-right: 8.5px;
         // letter-spacing: 1px;
 
         &:hover {
@@ -209,7 +213,8 @@ body {
 }
 
 .personalities__name {
-    font-family: 'Lato-Black';
+    font-family: 'Lato';
+    font-weight: 900;
     text-align: justify;
     font-size: 18px;
     color: #767e9e;
@@ -218,7 +223,8 @@ body {
 }
 
 .personalities__description {
-    font-family: 'Lato-Regular';
+    font-family: 'Lato';
+    font-weight: 400;
     line-height: 22px;
     font-size: 12px;
     text-align: justify;
