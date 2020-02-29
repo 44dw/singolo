@@ -1,9 +1,27 @@
-  
-@import '_fonts.scss';
+@import 'abstract/constants';  
+@import 'abstract/fonts';
 
 %flex-row {
     display: flex;
     flex-direction: row;
+}
+
+%font-regular {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 12px;
+}
+
+%font-light {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+@mixin font-bold($font-size: 30px) {
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: $font-size;
 }
 
 body {
@@ -11,22 +29,21 @@ body {
 }
 
 .wrapper {
-    max-width: 1020px;
-    min-width: 1020px;
+    max-width: $content-width;
+    min-width: $content-width;
     margin: auto;
 }
 
-.portfolio_bottom {
-    height: 6px;
-    background-color: #323746;
-}
-
 .portfolio {
-    background-color: #2d303a;
-    font-family: 'Lato';
-    font-weight: 400;
-    font-size: 12px;
-    color: #767e9e;
+    @extend %font-regular;
+
+    background-color: $color-portfolio;
+    color: $color-light-text;
+
+    &_bottom {
+        height: 6px;
+        background-color: $color-portfolio-bottom;
+    }
 }
 
 .portfolio__container {
@@ -34,47 +51,41 @@ body {
 }
 
 .portfolio__header {
+    @include font-bold();
+
     margin: auto;
-    font-family: 'Lato';
-    font-weight: 900;
-    font-size: 30px;
-    color: #666d89;
+    color: $color-bold-text;
 }
 
 .portfolio__description {
-    font-family: 'Lato';
-    font-weight: 300;
-    font-size: 18px;
-    color: #767e9e;
+    @extend %font-light;
+    color: $color-light-text;
     margin-top: 22px;
     margin-bottom: 15px;
 }
 
 .about {
-    // height: 734px;
-    background-color: #f2f2f2;
+    background-color: $color-about;
 }
 
 .about__bottom {
     height: 6px;
-    background-color: #ffffff;
+    background-color: $color-about-bottom;
 }
 
 .about__header {
+    @include font-bold();
+
     margin: 0;
-    font-size: 30px;
-    color: #666d89;
-    font-family: 'Lato';
-    font-weight: 900;
+    color: $color-bold-text;
 }
 
 .about__description {
-    font-size: 18px;
-    font-family: 'Lato';
-    font-weight: 300;
+    @extend %font-light;
+
     text-align: justify;
     line-height: 30px;
-    color: #767e9e;
+    color: $color-light-text;
     margin-bottom: 44px;
 }
 
@@ -90,22 +101,21 @@ body {
     margin-bottom: 18px;
 
     li {
-        border: 1px solid #666d89;
+        border: 1px solid $color-bold-text;
         padding: 3px 7px;
         border-radius: 5px;
         margin-right: 8.5px;
-        // letter-spacing: 1px;
 
         &:hover {
-            color:  #dedede;
-            border-color: #dedede;
+            color:  $color-navigation-hover;
+            border-color: $color-navigation-hover;
             cursor: pointer;
         }
     }
 
     .active {
-        color:  #dedede;
-        border: 1px solid #dedede;
+        color:  $color-navigation-hover;
+        border: 1px solid $color-navigation-hover;
     }
 }
 
@@ -115,16 +125,10 @@ body {
     grid-template-rows: repeat(3, 187px);
     column-gap: 20px;
     row-gap: 20px;
-
-    .tiles__tile {
-        // TODO del
-        background-color: green;
-    }
 }
 
 .ship {
     background-image: url("./assets/images/gallery/ship.png");
-    // background-position: top -9px left -7px;
     background-position: right -10px top -11px;
 }
 
@@ -213,28 +217,27 @@ body {
 }
 
 .personalities__name {
-    font-family: 'Lato';
-    font-weight: 900;
+    @include font-bold(18px);
+
     text-align: justify;
     font-size: 18px;
-    color: #767e9e;
+    color: $color-light-text;
     margin-bottom: 8px;
     word-wrap: normal;
 }
 
 .personalities__description {
-    font-family: 'Lato';
-    font-weight: 400;
+    @extend %font-regular;
+
     line-height: 22px;
-    font-size: 12px;
     text-align: justify;
-    color: #666d89;
+    color: $color-bold-text;
     margin-bottom: 21px;
 }
 
 .social-networks {
-    display: flex;
-    flex-direction: row;
+    @extend %flex-row;
+    
     justify-content: flex-start;
     align-items: center;
 

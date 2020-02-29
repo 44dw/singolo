@@ -23,9 +23,21 @@
   src: url("./assets/fonts/Lato-Thin.ttf");
   font-weight: 100;
 }
-.gallery__filtering {
+.social-networks, .gallery__filtering {
   display: flex;
   flex-direction: row;
+}
+
+.personalities__description, .portfolio {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.about__description, .portfolio__description {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 18px;
 }
 
 body {
@@ -38,17 +50,13 @@ body {
   margin: auto;
 }
 
+.portfolio {
+  background-color: #2d303a;
+  color: #767e9e;
+}
 .portfolio_bottom {
   height: 6px;
   background-color: #323746;
-}
-
-.portfolio {
-  background-color: #2d303a;
-  font-family: "Lato";
-  font-weight: 400;
-  font-size: 12px;
-  color: #767e9e;
 }
 
 .portfolio__container {
@@ -56,17 +64,14 @@ body {
 }
 
 .portfolio__header {
-  margin: auto;
   font-family: "Lato";
   font-weight: 900;
   font-size: 30px;
+  margin: auto;
   color: #666d89;
 }
 
 .portfolio__description {
-  font-family: "Lato";
-  font-weight: 300;
-  font-size: 18px;
   color: #767e9e;
   margin-top: 22px;
   margin-bottom: 15px;
@@ -82,17 +87,14 @@ body {
 }
 
 .about__header {
-  margin: 0;
-  font-size: 30px;
-  color: #666d89;
   font-family: "Lato";
   font-weight: 900;
+  font-size: 30px;
+  margin: 0;
+  color: #666d89;
 }
 
 .about__description {
-  font-size: 18px;
-  font-family: "Lato";
-  font-weight: 300;
   text-align: justify;
   line-height: 30px;
   color: #767e9e;
@@ -131,9 +133,6 @@ body {
   grid-template-rows: repeat(3, 187px);
   column-gap: 20px;
   row-gap: 20px;
-}
-.gallery__tiles .tiles__tile {
-  background-color: green;
 }
 
 .ship {
@@ -228,6 +227,7 @@ body {
 .personalities__name {
   font-family: "Lato";
   font-weight: 900;
+  font-size: 18px;
   text-align: justify;
   font-size: 18px;
   color: #767e9e;
@@ -236,18 +236,13 @@ body {
 }
 
 .personalities__description {
-  font-family: "Lato";
-  font-weight: 400;
   line-height: 22px;
-  font-size: 12px;
   text-align: justify;
   color: #666d89;
   margin-bottom: 21px;
 }
 
 .social-networks {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
