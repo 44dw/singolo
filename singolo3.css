@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Thin.ttf");
+  font-weight: 100;
+}
+.quote {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1020px;
+  min-width: 1020px;
+  margin: auto;
+}
+
+.quote {
+  background-color: #f06c64;
+  color: #f0d8d9;
+  text-align: justify;
+}
+
+.quote__container {
+  padding: 34px 41px;
+}
+
+.quote__header {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.quote__description {
+  margin-top: 18px;
+  margin-bottom: 43px;
+  line-height: 30px;
+}
+
+.response__form {
+  display: flex;
+  flex-direction: column;
+}
+.response__form textarea {
+  resize: none;
+}
+
+.form_input {
+  margin-bottom: 16px;
+  background-color: #d6564f;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=singolo3.css.map */

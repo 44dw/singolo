@@ -1,0 +1,70 @@
+@import 'abstract/constants';  
+@import 'abstract/fonts';
+
+
+%font-regular {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 12px;
+}
+
+%font-light {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+@mixin font-bold($font-size: 30px) {
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: $font-size;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: $content-width;
+    min-width: $content-width;
+    margin: auto;
+}
+
+.quote {
+    @extend %font-light;
+    background-color: $color-quote;
+    color: $color-quote-text;
+    text-align: justify;
+}
+
+.quote__container {
+    padding: 34px 41px;
+}
+
+.quote__header {
+    @include font-bold;
+    margin-bottom: 0px;
+}
+
+.quote__description {
+    margin-top: 18px;
+    margin-bottom: 43px;
+    line-height: 30px;
+}
+
+.response__form {
+    display: flex;
+    flex-direction: column;
+
+    & textarea {
+        resize: none;
+    }
+}
+
+.form_input {
+    margin-bottom: 16px;
+    background-color: $color-form-input;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+}
