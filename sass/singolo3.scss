@@ -38,7 +38,7 @@ body {
 }
 
 .quote__container {
-    padding: 34px 41px;
+    padding: 35px 40px;
 }
 
 .quote__header {
@@ -48,13 +48,18 @@ body {
 
 .quote__description {
     margin-top: 18px;
-    margin-bottom: 43px;
+    margin-bottom: 45px;
     line-height: 30px;
+}
+
+.quote__form_container {
+    width: 619px;
 }
 
 .response__form {
     display: flex;
     flex-direction: column;
+    // align-items: flex-end;
 
     & textarea {
         resize: none;
@@ -65,6 +70,62 @@ body {
     margin-bottom: 16px;
     background-color: $color-form-input;
     border: none;
-    padding: 12px;
+    padding: 11px;
     border-radius: 5px;
+}
+
+.qoute__response {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quote__info {
+    width: 300px;
+}
+
+.info_description {
+    @extend %font-regular;
+    line-height: 22px;
+    text-align: justify;
+    margin-bottom: 19px;
+}
+
+.info__contacts {
+    @extend %font-light;
+    font-size: 12px;
+    line-height: 22px;
+
+    a {
+        display: block;
+        color: $color-quote-text;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 23px;
+    }
+
+    .contacts__city {
+        margin-left: 3px;
+        padding-left: 20px;
+        background-image: url('../assets/images/icons/location.png');
+    }
+    
+    .contacts_tel {
+        background-image: url('../assets/images/icons/phone.png');
+    }
+    
+    .contacts_mail {
+        background-image: url('../assets/images/icons/mail.png');
+    }
+}
+
+.info_header {
+    margin: -4px 0px ;
+}
+
+#response-submit {
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
 }
