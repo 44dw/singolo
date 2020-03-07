@@ -657,13 +657,13 @@ body {
 .info__contacts .contacts__city {
   margin-left: 3px;
   padding-left: 20px;
-  background-image: url("../assets/images/icons/location.png");
+  background-image: url("./assets/images/icons/location.png");
 }
 .info__contacts .contacts_tel {
-  background-image: url("../assets/images/icons/phone.png");
+  background-image: url("./assets/images/icons/phone.png");
 }
 .info__contacts .contacts_mail {
-  background-image: url("../assets/images/icons/mail.png");
+  background-image: url("./assets/images/icons/mail.png");
 }
 
 .info_header {
