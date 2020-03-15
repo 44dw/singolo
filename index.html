@@ -12,34 +12,36 @@
             <div class="header__logo"><h1>SINGOLO<span class="header__logo_star">*</span></h1></div>
             <nav class="header__navigation">
                 <ul>
-                    <li class="header__navigation_first active">HOME</li>
-                    <li>SERVICES</li>
-                    <li>PORTFOLIO</li>
-                    <li>ABOUT</li>
-                    <li class="header__navigation_last">CONTACT</li>
+                    <li class="header__navigation_first"><a class="active" href="#slider">HOME</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li class="header__navigation_last"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="slider">
+            <section class="slider" id="slider">
                 <div class="slider__promo">
                     <div class="arrows promo__arrow_left"><img src="./assets/images/chev-left.png" alt="chev left"></div>
                     <div class="promo__content">
                         <div class="content__phone_vertical">
                             <img src="./assets/images/phone/shadow.png" alt="phone shadow" class="shadow">
                             <img src="./assets/images/phone/phone.png" alt="vertical phone" id="phone-vertical">
+                            <div class="screen" id="screen-vertical"></div>
                             <img src="./assets/images/phone/yellow-screen-picture.png" alt="yellow picture" id="yellow-picture">
                         </div>
                         <div class="content__phone_horizontal">
                             <img src="./assets/images/phone/shadow.png" alt="phone shadow" id="shadow-horizontal" class="shadow">
                             <img src="./assets/images/phone/phone.png" alt="horizontal phone" id="phone-horizontal">
+                            <div class="screen" id="screen-horizontal"></div>
                             <img src="./assets/images/phone/blue-screen-picture.png" alt="blue picture" id="blue-picture">
                         </div>
                     </div>
                     <div class="arrows promo__arrow_right"><img src="./assets/images/chev-right.png" alt="chev right"></div>
                 </div>
             </section>
-            <section class="services">
+            <section class="services" id="services">
                 <div class="info">
                     <h2 class="info__header">Our Services</h2>
                     <p class="info__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -109,7 +111,7 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <h2 class="portfolio__header">Portfolio</h2>
                 <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="gallery">
@@ -135,7 +137,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <h2 class="about__header">About Us</h2>
                 <p class="about__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="about__personalities">
@@ -174,7 +176,7 @@
                     </div>
                 </div>
             </section>
-            <section class="quote">
+            <section class="quote" id="contact">
                 <h2 class="quote__header">Get a Quote</h2>
                 <p class="quote__description">
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
@@ -211,5 +213,14 @@
             </div>
         </footer>
     </div>
+    <div class="overlay hide-content">
+        <div class="modal">
+            <h4>Письмо отправлено</h4>
+            <p class="modal__topic"></p>
+            <p class="modal__describe"></p>
+            <button>OK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
