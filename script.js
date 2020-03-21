@@ -125,6 +125,14 @@ const onScroll = (event) => {
             });
         }
     });
+
+    // reach the end of the page
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        MENU_LINKS.forEach((link) => {
+            link.classList.remove('active');
+        })
+        document.querySelector('.header__navigation_last a').classList.add('active');
+    }
 }
 
 const cloneSlides = (slides) => {
