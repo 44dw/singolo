@@ -62,13 +62,13 @@ const addElementsClickHandler = () => {
     ARROW_LEFT.addEventListener('click', () => shiftSlide(-1));
     ARROW_RIGHT.addEventListener('click', () => shiftSlide(1));
     
-    PHONE_VERTICAL.addEventListener('click', () => {
-        YELLOW_PICTURE.classList.toggle('hide-content');
-    })
+    // PHONE_VERTICAL.addEventListener('click', () => {
+    //     YELLOW_PICTURE.classList.toggle('hide-content');
+    // })
     
-    PHONE_HORIZONTAL.addEventListener('click', () => {
-        BLUE_PICTURE.classList.toggle('hide-content');
-    })
+    // PHONE_HORIZONTAL.addEventListener('click', () => {
+    //     BLUE_PICTURE.classList.toggle('hide-content');
+    // })
     
     FILTERING.addEventListener('click', (event) => {
         FILTERING.querySelectorAll('li').forEach(el => el.classList.remove('active'));
@@ -80,8 +80,10 @@ const addElementsClickHandler = () => {
     })
     
     GALLERY_TILES.addEventListener('click', (event) => {
-        GALLERY_TILES.querySelectorAll('div').forEach(el => el.classList.remove('tiles__tile_active'));
-        event.target.classList.add('tiles__tile_active');
+        GALLERY_TILES.querySelectorAll('.tiles__tile').forEach(el => el.classList.remove('tiles__tile_active'));
+        if (event.target.classList.contains('tiles__tile')) {
+            event.target.classList.add('tiles__tile_active');
+        }
     })
     
     SUBMIT.addEventListener('click', (event) => {
@@ -150,15 +152,17 @@ const shiftSlide = (direction) => {
     PROMO_CONTENT.classList.add('shifting');
 
     if (allowShift) {
-        sliderPosition = PROMO_CONTENT.offsetLeft;
+        console.log(PROMO_CONTENT.style.left);
+
+        const currentStyleLeft = Number(PROMO_CONTENT.style.left.slice(0, PROMO_CONTENT.style.left.length - 1));
 
         switch(direction) {
             case (1):
-                PROMO_CONTENT.style.left = `${sliderPosition - SLIDE_SIZE}px`;
+                PROMO_CONTENT.style.left = `${currentStyleLeft - 100}%`;
                 currentSlide++;
                 break;
             case (-1):
-                PROMO_CONTENT.style.left = `${sliderPosition + SLIDE_SIZE}px`;
+                PROMO_CONTENT.style.left = `${currentStyleLeft + 100}%`;
                 currentSlide--;
                 break;
         }
@@ -171,12 +175,12 @@ const checkCurrentSlide = () => {
     PROMO_CONTENT.classList.remove('shifting');
 
     if (currentSlide == -1) {
-        PROMO_CONTENT.style.left = `-${(SLIDES_LENGTH * SLIDE_SIZE)}px`;
+        PROMO_CONTENT.style.left = `-${(SLIDES_LENGTH * 100)}%`;
         currentSlide = SLIDES_LENGTH - 1;
     }
 
     if (currentSlide == SLIDES_LENGTH) {
-        PROMO_CONTENT.style.left = `-${(1 * SLIDE_SIZE)}px`;
+        PROMO_CONTENT.style.left = `-${(1 * 100)}%`;
         currentSlide = 0;
     }
 
