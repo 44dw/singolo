@@ -4,6 +4,11 @@ const SECTIONS = document.querySelectorAll('main>section');
 // menu
 const MENU = document.getElementsByClassName('header__navigation')[0];
 const MENU_LINKS = document.querySelectorAll('.header__navigation ul li a');
+const HEADER_MOBILE_MENU = document.querySelector('.header__mobile-menu');
+const MOBILE_MENU_LINKS = document.querySelectorAll('.header__mobile-menu ul li a');
+const HAMBURGER = document.querySelector('.header__hamburger');
+const HEADER_LOGO = document.querySelector('.header__logo');
+const MOBILE_MENU = document.querySelector('header .overlay');
 
 // slider
 const PROMO = document.getElementsByClassName('slider__promo')[0];
@@ -31,7 +36,7 @@ const DESCRIBE = document.getElementById('response-describe');
 const SUBMIT = document.getElementById('response-submit');
 
 // modal
-const OVERLAY = document.getElementsByClassName('overlay')[0];
+const MODAL_OVERLAY = document.querySelector('body > .overlay');
 const MODAL = document.getElementsByClassName('modal')[0];
 const MODAL_BUTTON = document.querySelector('.modal button');
 
@@ -62,13 +67,13 @@ const addElementsClickHandler = () => {
     ARROW_LEFT.addEventListener('click', () => shiftSlide(-1));
     ARROW_RIGHT.addEventListener('click', () => shiftSlide(1));
     
-    // PHONE_VERTICAL.addEventListener('click', () => {
-    //     YELLOW_PICTURE.classList.toggle('hide-content');
-    // })
+    PHONE_VERTICAL.addEventListener('click', () => {
+        YELLOW_PICTURE.classList.toggle('hide-content');
+    })
     
-    // PHONE_HORIZONTAL.addEventListener('click', () => {
-    //     BLUE_PICTURE.classList.toggle('hide-content');
-    // })
+    PHONE_HORIZONTAL.addEventListener('click', () => {
+        BLUE_PICTURE.classList.toggle('hide-content');
+    })
     
     FILTERING.addEventListener('click', (event) => {
         FILTERING.querySelectorAll('li').forEach(el => el.classList.remove('active'));
@@ -87,21 +92,40 @@ const addElementsClickHandler = () => {
     })
     
     SUBMIT.addEventListener('click', (event) => {
+        const name = NAME.value;
+        const email = EMAIL.value;
+        if (name.length == 0 || email.value == 0) {
+            return;
+        }
         event.preventDefault();
         const subject = SUBJECT.value;
         const describe = DESCRIBE.value;
-        MODAL.querySelector('.modal__topic').textContent = (subject == 'Singolo') ? 'Тема: Singolo' : 'Без темы';
-        MODAL.querySelector('.modal__describe').textContent = (describe == 'Portfolio project') ? 'Описание: Portfolio project' : 'Без описания';
+        MODAL.querySelector('.modal__topic').textContent = (subject.length > 0) ? `Тема: ${subject}` : 'Без темы';
+        MODAL.querySelector('.modal__describe').textContent = (describe.length > 0) ? `Описание: ${describe}` : 'Без описания';
     
-        OVERLAY.classList.toggle('hide-content');
+        MODAL_OVERLAY.classList.toggle('hide-content');
     })
     
     MODAL_BUTTON.addEventListener('click', () => {
-        OVERLAY.classList.toggle('hide-content');
+        MODAL_OVERLAY.classList.toggle('hide-content');
         earseFormContent();
     })
 
-    document.addEventListener('scroll', onScroll)
+    document.addEventListener('scroll', onScroll);
+
+    HAMBURGER.addEventListener('click', () => {
+        HAMBURGER.classList.toggle('active');
+        HEADER_LOGO.classList.toggle('mobile-menu');
+        MOBILE_MENU.classList.toggle('hide-content');
+    });
+
+    HEADER_MOBILE_MENU.addEventListener('click', (event) => {
+        if (event.target.tagName == 'A') {
+            HAMBURGER.classList.remove('active');
+            HEADER_LOGO.classList.remove('mobile-menu');
+            MOBILE_MENU.classList.add('hide-content');
+        }
+    })
 
 }
 
@@ -120,7 +144,13 @@ const onScroll = (event) => {
 
         if (element.offsetTop <= curPos && (element.offsetTop + element.offsetHeight) > curPos) {
             MENU_LINKS.forEach((link) => {
-                link.classList.remove('active')
+                link.classList.remove('active');
+                if (id === link.getAttribute('href').substring(1)) {
+                    link.classList.add('active');
+                }
+            });
+            MOBILE_MENU_LINKS.forEach((link) => {
+                link.classList.remove('active');
                 if (id === link.getAttribute('href').substring(1)) {
                     link.classList.add('active');
                 }
@@ -133,7 +163,7 @@ const onScroll = (event) => {
         MENU_LINKS.forEach((link) => {
             link.classList.remove('active');
         })
-        document.querySelector('.header__navigation_last a').classList.add('active');
+        document.querySelectorAll('.header__navigation_last a').forEach(a => a.classList.add('active'));
     }
 }
 
